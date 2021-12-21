@@ -142,7 +142,7 @@ a:hover {
     height: 24px;
     align-items: center;
     justify-content: center;
-    color: blue;
+    font-weight: bold;
 }
 
 .sizeButtonsContainer input, .resetButton {
@@ -150,6 +150,7 @@ a:hover {
     border: 3px solid black;
     border-radius: 2em;
     background-color:rgb(218, 49, 49);
+    font-weight: bold;
 }
 
 .resetButtonContainer {

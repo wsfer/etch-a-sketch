@@ -48,5 +48,5 @@ generatorMedium.addEventListener('click', function () {createPixel(75, 8);});
 generatorLarge.addEventListener('click', function () {createPixel(100, 6);});
 
 //Button to reset pixels.
-const resetButton = document.querySelector('.reset');
+const resetButton = document.querySelector('.resetButton');
 resetButton.addEventListener('click', resetContainer);

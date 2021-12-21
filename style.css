@@ -1,14 +1,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background-color: rgb(218, 49, 49);
 }
 
 header, footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue;
+    background-color: rgb(218, 49, 49);
     padding: 16px;
 }
 
@@ -16,7 +16,7 @@ h1 {
     background-color: skyblue;
     border-radius: 0 16px;
     padding: 16px;
-    color: blue;
+    color: rgb(218, 49, 49);
     border: 3px solid black;
     font-weight: bold;
 }
@@ -52,7 +52,7 @@ a {
     padding: 0;
 }
 
-.options-one {
+.leftOptionsContainer {
     background-color: rgb(218, 49, 49);
     border-left: 3px solid black;
     border-top: 3px solid black;
@@ -67,7 +67,7 @@ a {
     padding: 16px;
 }
 
-.options-two {
+.rightOptionsContainer {
     background-color: rgb(218, 49, 49);
     border-right: 3px solid black;
     border-top: 3px solid black;
@@ -82,7 +82,7 @@ a {
     padding: 16px;
 }
 
-.middleBox {
+.middleContainer {
     background-color: rgb(218, 49, 49);
     display: flex;
     align-items: center;
@@ -122,10 +122,19 @@ a {
     padding: 8px;
 }
 
-.sizeButtonsContainer input, .reset {
+.sizeButtonsContainer input, .resetButton {
     margin: 8px;
     border: 3px solid black;
     border-radius: 2em;
     background-color:rgb(218, 49, 49);
-    color: gold;
+}
+
+.resetButtonContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: salmon;
+    border: 3px solid black;
+    border-radius: 16px;
+    width: 160px;
+    padding: 8px;
 }

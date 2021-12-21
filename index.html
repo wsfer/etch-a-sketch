@@ -9,7 +9,7 @@
     <body>
         <footer><h1>Etch-a-Sketch</h1></footer>
         <div id="main">
-            <div class="options-one">
+            <div class="leftOptionsContainer">
                 <h2>Select Size:</h3>
                 <div class="sizeButtonsContainer">
                     <input id="32" class="generatorSmall" type="button" value="Small">
@@ -17,12 +17,12 @@
                     <input class="generatorLarge" type="button" value="Large">
                 </div>
             </div>
-            <div class="middleBox">
+            <div class="middleContainer">
                 <div id="pixelContainer">
 
                 </div>
             </div>
-            <div class="options-two">
+            <div class="rightOptionsContainer">
                 <h2>Select a Color: </h2>
                 <div class="colorButtonsContainer">
                     <div class="red"></div>
@@ -36,7 +36,9 @@
                     <div class="blue"></div>
                     <div class="violet"></div>
                 </div>
-                <button class="reset">Reset</button>
+                <div class="resetButtonContainer">
+                    <button class="resetButton">Reset</button>
+                </div>
             </div>
         </div>
         <header><a href="https://www.theodinproject.com">The Odin Project</a></header>

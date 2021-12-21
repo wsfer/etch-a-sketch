@@ -41,37 +41,6 @@ a:hover {
     border: 3px solid black;
 }
 
-#instructions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    margin: 120px 60px 0 60px;
-    background-color: skyblue;
-    border-radius: 36px;
-    border: 3px solid black;
-}
-
-.instructionsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(218, 49, 49);
-    width: 800px;
-    height: auto;
-    padding: 32px;
-    border-radius: 36px;
-    border: 3px solid black;
-}
-
-.instructionsContainer ul {
-    border: 3px solid black;
-    background-color: salmon;
-    border-radius: 16px;
-    padding: 16px;
-    list-style: none;
-}
-
 #pixelContainer {
     background-color:salmon;
     display: flex;

@@ -1,15 +1,19 @@
 let side = 0;
 
-function createPixel (numberPerSide) {
-    for (i = 0 ; i < numberPerSide * numberPerSide ; i++) {
+function createPixel (pixelPerSide, pixelSize) {
+    for (i = 0 ; i < pixelPerSide * pixelPerSide ; i++) {
         const pixel = document.createElement('div');
+
+        pixel.style.width = `${pixelSize}px`;
+        pixel.style.height = `${pixelSize}px`;
         pixel.classList.add('pixel');
         pixel.addEventListener('mouseenter', function (e) {
             e.target.style.background = 'black';
         });
+
         container.appendChild(pixel);
     }
-    side = numberPerSide;
+    side = pixelPerSide;
 }
 
 function resetContainer () {
@@ -25,9 +29,9 @@ const container = document.querySelector('#container');
 const generatorSmall = document.querySelector('.generatorSmall');
 const generatorMedium = document.querySelector('.generatorMedium');
 const generatorLarge = document.querySelector('.generatorLarge');
-generatorSmall.addEventListener('click', function () {createPixel(32);});
-generatorMedium.addEventListener('click', function () {createPixel(64);});
-generatorLarge.addEventListener('click', function () {createPixel(100);});
+generatorSmall.addEventListener('click', function () {createPixel(50, 12);});
+generatorMedium.addEventListener('click', function () {createPixel(75, 8);});
+generatorLarge.addEventListener('click', function () {createPixel(100, 6);});
 
 //Button to reset pixels.
 const resetButton = document.querySelector('.reset');

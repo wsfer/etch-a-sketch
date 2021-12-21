@@ -22,8 +22,8 @@ header, footer {
     background-color:salmon;
     display: flex;
     flex-wrap: wrap;
-    width: 160px;
-    height: 160px;
+    width: 600px;
+    height: 600px;
 }
 
 .pixel {

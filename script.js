@@ -1,8 +1,8 @@
 let side = 0;
 let color = '';
 
-//This will give colors to buttons on 'Select a Color'.
-const colorSelectButtons = document.querySelectorAll('.colors > div');
+//This will give colors and a event to buttons on 'Select a Color'.
+const colorSelectButtons = document.querySelectorAll('.colorButtonsContainer > div');
 for (let i of colorSelectButtons) {
     i.style.background = i.classList;
     const myEle = document.querySelector(`.${i.classList}`).addEventListener('click', function (e) {
@@ -10,11 +10,10 @@ for (let i of colorSelectButtons) {
     });
 }
 
-function selectColor (button) {
-    color = button.classList;
-}
-
 function createPixel (pixelPerSide, pixelSize) {
+
+    document.querySelector('.sizeButtons').style.visibility = "hidden";
+
     for (i = 0 ; i < pixelPerSide * pixelPerSide ; i++) {
         const pixel = document.createElement('div');
 
@@ -35,6 +34,7 @@ function resetContainer () {
         const pixelToRemove = document.querySelector('.pixel');
         container.removeChild(pixelToRemove);
     }
+    document.querySelector('.sizeButtons').style.visibility = "visible";
 }
 
 const container = document.querySelector('#container');

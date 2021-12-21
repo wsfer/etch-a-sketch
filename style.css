@@ -1,12 +1,14 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: red;
 }
 
 header, footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: blue;
 }
 
 #main {
@@ -14,4 +16,12 @@ header, footer {
     justify-content: center;
     align-items: center;
     padding: 30px;
+}
+
+#container {
+    background-color: skyblue;
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 160px;
 }

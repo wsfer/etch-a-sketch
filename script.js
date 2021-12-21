@@ -25,9 +25,10 @@ function rainbow (pixel, color) {
     }
 }
 
-function createPixel (pixelPerSide, pixelSize) {
+function createPixel (pixelPerSide, pixelSize, size) {
 
     document.querySelector('.sizeButtonsContainer').style.visibility = "hidden";
+    document.querySelector('.choose').textContent = `${size} pixels`;
 
     for (i = 0 ; i < pixelPerSide * pixelPerSide ; i++) {
         const pixel = document.createElement('div');
@@ -48,6 +49,7 @@ function resetContainer () {
         container.removeChild(pixelToRemove);
     }
     document.querySelector('.sizeButtonsContainer').style.visibility = "visible";
+    document.querySelector('.choose').textContent = '';
 }
 
 const container = document.querySelector('#pixelContainer');
@@ -56,9 +58,9 @@ const container = document.querySelector('#pixelContainer');
 const generateSmallPixels = document.querySelector('.generatorSmall');
 const generateMediumPixels = document.querySelector('.generatorMedium');
 const generateLargePixels = document.querySelector('.generatorLarge');
-generateSmallPixels.addEventListener('click', function () {createPixel(100, 6);});
-generateMediumPixels.addEventListener('click', function () {createPixel(75, 8);});
-generateLargePixels.addEventListener('click', function () {createPixel(50, 12);});
+generateSmallPixels.addEventListener('click', function () {createPixel(100, 6, 'Small');});
+generateMediumPixels.addEventListener('click', function () {createPixel(75, 8, 'Medium');});
+generateLargePixels.addEventListener('click', function () {createPixel(50, 12, 'Large');});
 
 //Button to reset pixels.
 const resetButton = document.querySelector('.resetButton');

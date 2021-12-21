@@ -127,7 +127,7 @@ a:hover {
     border-radius: 16px;
 }
 
-.sizeButtonsContainer {
+.sizeButtonsContainer, .choose {
     display: flex;
     flex-direction: column;
     background-color: salmon;
@@ -135,6 +135,14 @@ a:hover {
     border-radius: 16px;
     width: 160px;
     padding: 8px;
+    margin: 16px 0;
+}
+
+.choose {
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    color: blue;
 }
 
 .sizeButtonsContainer input, .resetButton {

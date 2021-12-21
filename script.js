@@ -5,3 +5,6 @@ function createPixel () {
     pixel.classList.add('pixel');
     container.appendChild(pixel);
 }
+
+const generator = document.querySelector('.generator');
+generator.addEventListener('click', createPixel);

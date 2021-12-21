@@ -1,11 +1,18 @@
 let side = 0;
+let color = '';
 
 //This will give colors to buttons on 'Select a Color'.
 const colorSelectButtons = document.querySelectorAll('.colors > div');
 for (let i of colorSelectButtons) {
     i.style.background = i.classList;
+    const myEle = document.querySelector(`.${i.classList}`).addEventListener('click', function (e) {
+        color = e.target.classList;
+    });
 }
 
+function selectColor (button) {
+    color = button.classList;
+}
 
 function createPixel (pixelPerSide, pixelSize) {
     for (i = 0 ; i < pixelPerSide * pixelPerSide ; i++) {
@@ -14,7 +21,9 @@ function createPixel (pixelPerSide, pixelSize) {
         pixel.style.width = `${pixelSize}px`;
         pixel.style.height = `${pixelSize}px`;
         pixel.classList.add('pixel');
-        pixel.addEventListener('mouseenter', function (e) {randomColor(e.target)});
+        pixel.addEventListener('mouseenter', function (e) {
+            e.target.style.background = color;
+        });
 
         container.appendChild(pixel);
     }
@@ -41,11 +50,3 @@ generatorLarge.addEventListener('click', function () {createPixel(100, 6);});
 //Button to reset pixels.
 const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', resetContainer);
-
-function randomColor (element) {
-    let red = Math.floor(Math.random() * 256);
-    let green = Math.floor(Math.random() * 256);
-    let blue = Math.floor(Math.random() * 256);
-    element.style.background = `rgb(${red},${green},${blue})`;
-}
-

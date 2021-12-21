@@ -42,8 +42,19 @@ a {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    margin: 60px;
+    margin: 120px 60px 0 60px;
     background-color: skyblue;
+    border-radius: 36px;
+    border: 3px solid black;
+}
+
+.instructionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(218, 49, 49);
+    width: 800px;
+    height: 800px;
     border-radius: 36px;
     border: 3px solid black;
 }
@@ -76,6 +87,15 @@ a {
     justify-content: center;
     flex-direction: column;
     padding: 16px;
+}
+
+.leftOptionsContainer a {
+    margin: 120px 0 0 0;
+    padding: 16px;
+    background-color: salmon;
+    border: 3px solid black;
+    color: black;
+    border-radius: 2em;
 }
 
 .rightOptionsContainer {

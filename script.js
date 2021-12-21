@@ -11,5 +11,15 @@ function createPixel () {
     }
 }
 
+function resetContainer () {
+    for (i = 0 ; i < 16*16 ; i++) {
+        const pixelToRemove = document.querySelector('.pixel');
+        container.removeChild(pixelToRemove);
+    }
+}
+
 const generator = document.querySelector('.generator');
 generator.addEventListener('click', createPixel);
+
+const resetButton = document.querySelector('.reset');
+resetButton.addEventListener('click', resetContainer);

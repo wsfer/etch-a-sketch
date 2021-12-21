@@ -9,6 +9,7 @@ function createPixel () {
         });
         container.appendChild(pixel);
     }
+    
 }
 
 function resetContainer () {
@@ -18,7 +19,9 @@ function resetContainer () {
     }
 }
 
-const generator = document.querySelector('.generator');
+const generatorSmall = document.querySelector('.generatorSmall');
+const generatorMedium = document.querySelector('.generatorMedium');
+const generatorLarge = document.querySelector('.generatorLarge');
 generator.addEventListener('click', createPixel);
 
 const resetButton = document.querySelector('.reset');

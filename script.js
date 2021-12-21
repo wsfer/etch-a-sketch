@@ -52,12 +52,12 @@ function resetContainer () {
 const container = document.querySelector('#pixelContainer');
 
 //Buttons to generate pixels.
-const generatorSmall = document.querySelector('.generatorSmall');
-const generatorMedium = document.querySelector('.generatorMedium');
-const generatorLarge = document.querySelector('.generatorLarge');
-generatorSmall.addEventListener('click', function () {createPixel(50, 12);});
-generatorMedium.addEventListener('click', function () {createPixel(75, 8);});
-generatorLarge.addEventListener('click', function () {createPixel(100, 6);});
+const generateSmallPixels = document.querySelector('.generatorSmall');
+const generateMediumPixels = document.querySelector('.generatorMedium');
+const generateLargePixels = document.querySelector('.generatorLarge');
+generateSmallPixels.addEventListener('click', function () {createPixel(100, 6);});
+generateMediumPixels.addEventListener('click', function () {createPixel(75, 8);});
+generateLargePixels.addEventListener('click', function () {createPixel(50, 12);});
 
 //Button to reset pixels.
 const resetButton = document.querySelector('.resetButton');

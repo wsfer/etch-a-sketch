@@ -4,6 +4,9 @@ function createPixel () {
     for (i = 0 ; i < 16*16 ; i++) {
         const pixel = document.createElement('div');
         pixel.classList.add('pixel');
+        pixel.addEventListener('mouseenter', function (e) {
+            e.target.style.background = 'black';
+        });
         container.appendChild(pixel);
     }
 }

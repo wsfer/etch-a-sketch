@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-color: skyblue;
 }
 
 header, footer {
@@ -19,9 +19,17 @@ header, footer {
 }
 
 #container {
-    background-color: skyblue;
+    background-color:salmon;
     display: flex;
     flex-wrap: wrap;
     width: 160px;
     height: 160px;
+}
+
+.pixel {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }

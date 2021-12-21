@@ -8,3 +8,10 @@ header, footer {
     align-items: center;
     justify-content: center;
 }
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}

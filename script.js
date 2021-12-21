@@ -12,7 +12,7 @@ for (let i of colorSelectButtons) {
 
 function createPixel (pixelPerSide, pixelSize) {
 
-    document.querySelector('.sizeButtons').style.visibility = "hidden";
+    document.querySelector('.sizeButtonsContainer').style.visibility = "hidden";
 
     for (i = 0 ; i < pixelPerSide * pixelPerSide ; i++) {
         const pixel = document.createElement('div');
@@ -34,10 +34,10 @@ function resetContainer () {
         const pixelToRemove = document.querySelector('.pixel');
         container.removeChild(pixelToRemove);
     }
-    document.querySelector('.sizeButtons').style.visibility = "visible";
+    document.querySelector('.sizeButtonsContainer').style.visibility = "visible";
 }
 
-const container = document.querySelector('#container');
+const container = document.querySelector('#pixelContainer');
 
 //Buttons to generate pixels.
 const generatorSmall = document.querySelector('.generatorSmall');

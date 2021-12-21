@@ -26,10 +26,8 @@ function rainbow (pixel, color) {
 }
 
 function createPixel (pixelPerSide, pixelSize, size) {
-
     document.querySelector('.sizeButtonsContainer').style.visibility = "hidden";
     document.querySelector('.choose').textContent = `${size} pixels`;
-
     for (i = 0 ; i < pixelPerSide * pixelPerSide ; i++) {
         const pixel = document.createElement('div');
 

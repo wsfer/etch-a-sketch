@@ -1,9 +1,11 @@
 const container = document.querySelector('#container');
 
 function createPixel () {
-    const pixel = document.createElement('div');
-    pixel.classList.add('pixel');
-    container.appendChild(pixel);
+    for (i = 0 ; i < 16*16 ; i++) {
+        const pixel = document.createElement('div');
+        pixel.classList.add('pixel');
+        container.appendChild(pixel);
+    }
 }
 
 const generator = document.querySelector('.generator');

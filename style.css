@@ -24,6 +24,8 @@ h1 {
 a {
     text-decoration: none;
     color: black;
+    font-size: 24px;
+    margin: 8px;
 }
 
 a:hover {
@@ -157,6 +159,7 @@ input:hover,
 .colorButtonsContainer div:hover,
 .resetButton:hover {
     border: 3px solid gold;
+    color: gold;
 }
 
 .salmon {

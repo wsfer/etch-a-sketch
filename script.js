@@ -5,21 +5,24 @@ let color = '';
 const colorSelectButtons = document.querySelectorAll('.colorButtonsContainer > div');
 for (let i of colorSelectButtons) {
     i.style.background = i.classList;
-    const myEle = document.querySelector(`.${i.classList}`)
-    if (myEle.classList == 'salmon') {
-        myEle.addEventListener('click', giveRandomColor);
+    const selectedColorButton = document.querySelector(`.${i.classList}`);
+    if (selectedColorButton.classList != 'salmon') {
+        selectedColorButton.addEventListener('click', function (e) {color = e.target.classList})
     } else {
-        myEle.addEventListener('click', function (e) {
-            color = e.target.classList;
-        });
+        selectedColorButton.addEventListener('click', function () {color = 'random'});
     }
 }
 
-function giveRandomColor () {
-    const red = Math.floor(Math.random()*256);
-    const green = Math.floor(Math.random()*256);
-    const blue = Math.floor(Math.random()*256);
-    color = `rgb(${red}, ${green}, ${blue})`;
+function rainbow (pixel, color) {
+    if (color == "random") {
+        const red = Math.floor(Math.random()*256);
+        const green = Math.floor(Math.random()*256);
+        const blue = Math.floor(Math.random()*256);
+        const randomColor = `rgb(${red},${green},${blue})`;
+        pixel.style.background = randomColor;
+    } else {
+        pixel.style.background = color;
+    }
 }
 
 function createPixel (pixelPerSide, pixelSize) {
@@ -32,9 +35,7 @@ function createPixel (pixelPerSide, pixelSize) {
         pixel.style.width = `${pixelSize}px`;
         pixel.style.height = `${pixelSize}px`;
         pixel.classList.add('pixel');
-        pixel.addEventListener('mouseenter', function (e) {
-            e.target.style.background = color;
-        });
+        pixel.addEventListener('mouseenter', function (e) {rainbow (e.target, color)});
 
         container.appendChild(pixel);
     }

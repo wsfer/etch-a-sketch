@@ -17,6 +17,7 @@ h1 {
     border-radius: 0 16px;
     padding: 16px;
     color: blue;
+    border: 3px solid black;
 }
 
 a {
@@ -32,6 +33,7 @@ a {
     margin: 0 60px;
     background-color: skyblue;
     border-radius: 36px;
+    border: 3px solid black;
 }
 
 #container {
@@ -40,6 +42,7 @@ a {
     flex-wrap: wrap;
     width: 600px;
     height: 600px;
+    border: 3px solid black;
 }
 
 .pixel {
@@ -92,8 +95,9 @@ a {
 .colors div {
     width: 50px;
     height: 50px;
-    background-color: blue;
     margin: 10px;
+    border-radius: 3em;
+    border: 3px solid black;
 }
 
 .colors {
@@ -102,4 +106,7 @@ a {
     justify-content: center;
     width: 160px;
     background-color: salmon;
+    margin: 20px;
+    border: 3px solid black;
+    border-radius: 16px;
 }

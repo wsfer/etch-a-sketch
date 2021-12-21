@@ -7,19 +7,24 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <footer>Etch-a-Sketch</footer>
+        <footer><h1>Etch-a-Sketch</h1></footer>
         <div id="main">
-            <div>
+            <div class="options-one">
                 <h3>Select Size:</h3>
-                <input class="generatorSmall" type="button" value="Small">
-                <input class="generatorMedium" type="button" value="Medium">
-                <input class="generatorLarge" type="button" value="Large">
+                <div>
+                    <input id="32" class="generatorSmall" type="button" value="Small">
+                    <input class="generatorMedium" type="button" value="Medium">
+                    <input class="generatorLarge" type="button" value="Large">
+                </div>
             </div>
-            
-            <div id="container">
+            <div class="middleBox">
+                <div id="container">
 
+                </div>
             </div>
-            <button class="reset">Reset</button>
+            <div class="options-two">
+                <button class="reset">Reset</button>
+            </div>
         </div>
         <header><a href="https://www.theodinproject.com">The Odin Project</a></header>
     </body>

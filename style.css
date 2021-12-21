@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: skyblue;
+    background-color: blue;
 }
 
 header, footer {
@@ -9,6 +9,19 @@ header, footer {
     align-items: center;
     justify-content: center;
     background-color: blue;
+    padding: 16px;
+}
+
+h1 {
+    background-color: skyblue;
+    border-radius: 0 16px;
+    padding: 16px;
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+    color: gold;
 }
 
 #main {
@@ -16,6 +29,9 @@ header, footer {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    margin: 0 60px;
+    background-color: skyblue;
+    border-radius: 36px;
 }
 
 #container {
@@ -32,4 +48,43 @@ header, footer {
     background-color: white;
     margin: 0;
     padding: 0;
+}
+
+.options-one {
+    background-color: rgb(218, 49, 49);
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 50px 0 0 50px;
+    width: 200px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.options-two {
+    background-color: rgb(218, 49, 49);
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 50px 0;
+    width: 200px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.middleBox {
+    background-color: rgb(218, 49, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }

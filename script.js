@@ -1,7 +1,6 @@
 let side = 0;
 let color = '';
 
-//This will give colors and a event to buttons on 'Select a Color'.
 const colorSelectButtons = document.querySelectorAll('.colorButtonsContainer > div');
 for (let i of colorSelectButtons) {
     i.style.background = i.classList;
@@ -13,6 +12,7 @@ for (let i of colorSelectButtons) {
     }
 }
 
+//This function give colors to pixels.
 function rainbow (pixel, color) {
     if (color == "random") {
         const red = Math.floor(Math.random()*256);
@@ -43,15 +43,6 @@ function createPixel (pixelPerSide, pixelSize, size) {
     side = pixelPerSide;
 }
 
-function resetContainer () {
-    for (i = 0 ; i < side * side ; i++) {
-        const pixelToRemove = document.querySelector('.pixel');
-        container.removeChild(pixelToRemove);
-    }
-    document.querySelector('.sizeButtonsContainer').style.visibility = "visible";
-    document.querySelector('.choose').textContent = '';
-}
-
 const container = document.querySelector('#pixelContainer');
 
 //Buttons to generate pixels.
@@ -65,3 +56,11 @@ generateLargePixels.addEventListener('click', function () {createPixel(50, 12, '
 //Button to reset pixels.
 const resetButton = document.querySelector('.resetButton');
 resetButton.addEventListener('click', resetContainer);
+function resetContainer () {
+    for (i = 0 ; i < side * side ; i++) {
+        const pixelToRemove = document.querySelector('.pixel');
+        container.removeChild(pixelToRemove);
+    }
+    document.querySelector('.sizeButtonsContainer').style.visibility = "visible";
+    document.querySelector('.choose').textContent = '';
+}

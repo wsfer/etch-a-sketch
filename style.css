@@ -189,3 +189,11 @@ input:hover,
 .resetButton:hover {
     border: 3px solid gold;
 }
+
+.salmon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}

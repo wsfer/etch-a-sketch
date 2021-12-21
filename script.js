@@ -5,9 +5,21 @@ let color = '';
 const colorSelectButtons = document.querySelectorAll('.colorButtonsContainer > div');
 for (let i of colorSelectButtons) {
     i.style.background = i.classList;
-    const myEle = document.querySelector(`.${i.classList}`).addEventListener('click', function (e) {
-        color = e.target.classList;
-    });
+    const myEle = document.querySelector(`.${i.classList}`)
+    if (myEle.classList == 'salmon') {
+        myEle.addEventListener('click', giveRandomColor);
+    } else {
+        myEle.addEventListener('click', function (e) {
+            color = e.target.classList;
+        });
+    }
+}
+
+function giveRandomColor () {
+    const red = Math.floor(Math.random()*256);
+    const green = Math.floor(Math.random()*256);
+    const blue = Math.floor(Math.random()*256);
+    color = `rgb(${red}, ${green}, ${blue})`;
 }
 
 function createPixel (pixelPerSide, pixelSize) {

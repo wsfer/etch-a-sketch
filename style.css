@@ -37,6 +37,17 @@ a {
     border: 3px solid black;
 }
 
+#instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 60px;
+    background-color: skyblue;
+    border-radius: 36px;
+    border: 3px solid black;
+}
+
 #pixelContainer {
     background-color:salmon;
     display: flex;
